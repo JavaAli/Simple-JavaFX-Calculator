@@ -3,7 +3,22 @@ package sample;
 public class Model {
 
     public float Calculate(long number1, long number2, String operator){
-        return 0;
+
+        switch (operator){
+            case "+":
+               return number1 + number2;
+            case "-":
+                return number1 - number2;
+            case "*":
+                return number1 * number2;
+            case "/":
+                if(number2 == 0)
+                    return 0;
+                return number1 / number2;
+                default:
+                    return  0;
+        }
+
     }
 
 }
